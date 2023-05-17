@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div style={{width: "600px"}}>
         <h1>demo: react-infinite-scroll-component</h1>
         <hr />
         <InfiniteScroll
@@ -35,7 +35,7 @@ function App() {
           next={fetchMoreData}
           hasMore={hasMore} // 특정 갯수 이상이면 멈추게끔!
           loader={<h4>Loading...</h4>}
-          height={400} // 400px의 높이를 가진 div안에서만 infinite scroll하게끔!
+          // height={400} // 400px의 높이를 가진 div안에서만 infinite scroll하게끔!
           endMessage={
             <p style={{ textAlign: "center" }}>
               <b>Yay! You have seen it all</b>

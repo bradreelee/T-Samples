@@ -1,8 +1,9 @@
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams, useSearchParams } from "react-router-dom"
 
 const ReactRouterDom = () => {
     const {id} = useParams();
     const navigate = useNavigate();
+    const {queryString} = useSearchParams();
 
     return <div></div>
 }

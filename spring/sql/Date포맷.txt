@@ -1,5 +1,7 @@
 https://www.geeksforgeeks.org/date_format-function-in-mariadb/
 
+DATE_FORMAT(column이름, '%Y-%m-%d %H:%%i)
+
 DATE_FORMAT(date, format_mask)
 
 %Y : Year as a numeric, 4-digit value

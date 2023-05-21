@@ -1,0 +1,24 @@
+SELECT 
+    A.USE_NO,
+    A.USE_DISTANCE,
+    A.USE_TIME,
+    DATE_FORMAT(...),
+    DATE_FORMAT(...),
+    DATE_FORMAT(...),
+    MAX(
+        CASE
+            WHEN B.PAYMETHOD_CODE = 'C'
+            THEN B.PAY_COST
+        END
+    ) AS "card_pay,
+    MAX(
+        CASE
+            WHEN B.PAYMETHOD_CODE = 'P'
+            THEN B.PAY_COST
+        END
+    ) AS "point_pay,
+FROM kicckboarc_svc.t_svc_use A
+JOIN kicckboarc_svc.t_svc_use_pay B ON A.USE_NO = B.USE_NO
+LEFT OUTER JOIN kickboard.t_card_pay C ON B.SVC_USE_PAY_NO = C.SVC_USE_PAY_NO
+LEFT OUTER JOIN kickboard.t_point_lay C ON B.SVC_USE_PAY_NO = D.SVC_USE_PAY_NO
+GROUP BY A.USE_NO

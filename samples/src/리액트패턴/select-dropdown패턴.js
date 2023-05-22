@@ -12,6 +12,7 @@ const Sample = () => {
     return tmp1.concat(tmp2);
   };
 
+  // filter 가 안되연 option value에 제대로 들어갔나 확인!
   return (
     <div>
       {/* select 처리 */}

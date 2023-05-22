@@ -12,7 +12,7 @@ const SampleComponent1 = () => {
   return (
     <div>
       <input
-        style={{ outline: "none", background: "none", border: "none" }} // input의 default 스타일 삭제
+        style={{ outline: "none", background: "none", border: "none" }} // input의 default 스타일 삭제 // width 100%로 정의해주기
         value={value}
         onChange={(e) => setValue(e.target.value)}
       ></input>

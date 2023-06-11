@@ -1,0 +1,28 @@
+<!--
+    VO 예시
+    public class SampleResponseVO {
+        private String primaryKey;
+        private String sampleField;
+        private InnerType innerType;
+        private List<ListItemVO> list;
+    }
+
+    public class InnerType {
+        private String InnerTypeField;
+    }
+
+    public class ListItem {
+        private Strinf listItemField;
+    }
+-->
+
+<resultMap id="sampleResultMap" type="com.sample.SampleResponseVO">
+    <id property="primaryKey" column="PK 컬럼명"/> <!-- id아니고 result로 해야할 수도 있음-->
+    <result property="sampleField" column="sample 컬럼명"/>
+    <association property="innerType" javaType="InnerType 경로">
+        <result property="innerTypeField" column="innerTypeField에 매핑할 컬럼명"/>
+    </association>
+    <collection property="list" ofType="ListItemVO 경로"> <!-- ofType: List Item의 타입을 명시 -->
+        <result property="listItemField" column="listItemField에 매핑할 컬럼명"/>
+    </collection>
+</resultMap>

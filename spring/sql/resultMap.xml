@@ -26,3 +26,5 @@
         <result property="listItemField" column="listItemField에 매핑할 컬럼명"/>
     </collection>
 </resultMap>
+
+<!-- 위에서 정의한 resultMap의 활용 -->

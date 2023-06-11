@@ -1,0 +1,10 @@
+<if test="searchCondition.posCodes != null ">
+    <foreach collection="searchCondition.posCodes" index="idx" item="posCode" open= "AND (" separator=" OR " close=")">
+        추가하고싶은 WHERE절 조건문
+    </foreach>
+</if>
+
+<!--
+    collection: 순회할 collection
+    index: collection의 아이템의 index. 이걸로 아이템에 접근하는 것은 불가능한듯.
+-->

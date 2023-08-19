@@ -1,19 +1,21 @@
 import React, { useState, useMemo } from "react";
-import Pagination from "./pagination/Pagination";
+import Pagination from "./pagination-with-dots/Pagination";
 import sampleData from "./data/mock-data.json";
 import "./style.scss";
 
 // code completely from https://github.com/mayankshubham/react-pagination
 // currently
 
-// 한 페이지에 표시되는 아이템의 갯수
+// 1. 한 페이지에 표시되는 아이템의 갯수
 //////////////////////////////////////////////////////////////////////////
 let PageSize = 10;
 //////////////////////////////////////////////////////////////////////////
 
 export default function App() {
+  // 2. 페이지 관리용 상태값
   //////////////////////////////////////////////////////////////////////////
   const [currentPage, setCurrentPage] = useState(1);
+  // 3. 데이터 세팅 함수
   // 화면에 뿌릴 데이터
   const [data, setData] = useState(sampleData.slice(0, 100));
 

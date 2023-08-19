@@ -36,11 +36,12 @@ const Pagination = (props) => {
     <ul
       className={classnames("pagination-container", { [className]: className })}
     >
+      {/* 왼쪽으로 버튼  */}
       <li
         className={classnames("pagination-item", {
-          disabled: currentPage === 1,
+          disabled: currentPage === 1, // 비활성화 여부
         })}
-        onClick={onPrevious}
+        onClick={onPrevious} // d왼쪽 버튼 클릭시 동작
       >
         <div className="arrow left" />
       </li>
@@ -60,11 +61,12 @@ const Pagination = (props) => {
           </li>
         );
       })}
+      {/* 오른쪽으로 버튼 */}
       <li
         className={classnames("pagination-item", {
-          disabled: currentPage === lastPage,
-        })}
-        onClick={onNext}
+          disabled: currentPage === lastPage, // 비활성화 여부
+        })} 
+        onClick={onNext} // 오른쪽 버튼 클릭시 동작.
       >
         <div className="arrow right" />
       </li>

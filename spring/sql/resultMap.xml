@@ -22,9 +22,10 @@
     <association property="innerType" javaType="InnerType 경로">
         <result property="innerTypeField" column="innerTypeField에 매핑할 컬럼명"/>
     </association>
-    <collection property="list" ofType="ListItemVO 경로"> <!-- ofType: List Item의 타입을 명시 -->
+    <collection property="list(VO 클래스 내의 list 필드명)" ofType="ListItemVO 경로"> <!-- ofType: List Item의 타입을 명시 -->
         <result property="listItemField" column="listItemField에 매핑할 컬럼명"/>
     </collection>
 </resultMap>
 
 <!-- 위에서 정의한 resultMap의 활용 -->
+<select id="레포지토리 메소드명" resultMap="resultMap id">
